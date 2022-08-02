@@ -1,0 +1,1 @@
+web: target/universal/stage/bin/lab-megasena -Dhttp.port=$PORT -Dlogger.file=conf/prod.logger.xml
