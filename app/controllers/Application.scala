@@ -14,7 +14,7 @@ class Application extends Controller {
   
   def getInfo = Action {
 
-    val filename = ".\\app\\controllers\\sorteios.txt"
+    val filename = "app\\controllers\\sorteios.txt"
     val lines = Source.fromFile(filename).getLines.mkString
     
     Ok(lines)
