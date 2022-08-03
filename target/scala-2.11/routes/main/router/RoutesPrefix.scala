@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:D:/works/Spread/workspace.211/lab-megasena/conf/routes
-// @DATE:Tue Aug 02 13:46:51 BRT 2022
+// @DATE:Wed Aug 03 17:14:24 BRT 2022
 
 
 package router {
