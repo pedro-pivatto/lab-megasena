@@ -1,3 +1,20 @@
+let request = new XMLHttpRequest()
+let data = [];
+
+request.open('GET', './info', false)
+request.onload = function () {
+  // Begin accessing JSON data here
+  data = JSON.parse(this.response)
+ 
+  if (request.status >= 200 && request.status < 400) {
+    } else {
+    console.log('error')
+  }
+}
+
+request.send()
+
+
 //Reset button
 const reset = (ev) => {
     //Erases the result text
@@ -20,9 +37,7 @@ const checkNumbers = (ev) => {
     let text = '';
     let numbers = [];
     let err = 0;
-    let data = [];
 
-    var request = new XMLHttpRequest()
 
     //Displays 'Resultado'
     document.getElementById('result').style.display = 'block';
@@ -56,18 +71,7 @@ const checkNumbers = (ev) => {
     }
 
 
-    request.open('GET', './info', false)
-    request.onload = function () {
-      // Begin accessing JSON data here
-      data = JSON.parse(this.response)
-     
-      if (request.status >= 200 && request.status < 400) {
-        } else {
-        console.log('error')
-      }
-    }
-    
-    request.send()
+
 
 
     //Checks if there is any error
