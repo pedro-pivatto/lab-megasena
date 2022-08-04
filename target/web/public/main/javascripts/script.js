@@ -71,9 +71,6 @@ const checkNumbers = (ev) => {
     }
 
 
-
-
-
     //Checks if there is any error
     if(err == 1) {
         msg.textContent = "Insira valores entre 1 e 60!";

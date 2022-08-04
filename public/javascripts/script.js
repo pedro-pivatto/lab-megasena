@@ -3,7 +3,6 @@ let data = [];
 
 request.open('GET', './info', false)
 request.onload = function () {
-  // Begin accessing JSON data here
   data = JSON.parse(this.response)
  
   if (request.status >= 200 && request.status < 400) {
@@ -69,9 +68,6 @@ const checkNumbers = (ev) => {
     if(numbers.length < 7) {
         err = 2;
     }
-
-
-
 
 
     //Checks if there is any error

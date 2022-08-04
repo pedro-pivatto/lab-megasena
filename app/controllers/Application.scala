@@ -2,8 +2,12 @@ package controllers
 
 import play.api._
 import play.api.mvc._
-import scala.io.Source
-
+import scala.io._
+import java.io._
+import java.io.{File, FileOutputStream, BufferedOutputStream, FileInputStream, BufferedInputStream}
+import play.api.libs.iteratee._
+import play.api.libs._
+import scala.concurrent.ExecutionContext.Implicits.global
 
 
 class Application extends Controller {
@@ -12,12 +16,11 @@ class Application extends Controller {
     Ok(views.html.mega())
   }
   
-  def getInfo = Action {
+  def getInfo = Action { 
 
-    val filename = "app/controllers/sorteios.txt"
-    val lines = Source.fromFile(filename).getLines.mkString
-    
-    Ok(lines)
+      val filename = "app/controllers/sorteios.txt"
+      val stream = ((new FileInputStream(filename)))
+
+      Ok.chunked(Enumerator.fromStream(stream))
   }
-
 }
