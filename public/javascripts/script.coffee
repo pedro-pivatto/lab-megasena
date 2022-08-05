@@ -61,6 +61,7 @@ reset = ->
   msg.textContent = ""
   result.style.display = "none"
   
+  
 document.getElementById("button-send").addEventListener("click", checkNumbers);
 
 document.getElementById("button-reset").addEventListener("click", reset);

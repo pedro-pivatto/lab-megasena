@@ -42,10 +42,8 @@
     if (numbers.length < 7) {
       err = 2;
     }
-
     switch (err) {
       case 1:
-
         msg.textContent = "Insira valores entre 1 e 60!";
         break;
       case 2:
