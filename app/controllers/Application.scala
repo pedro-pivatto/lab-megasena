@@ -17,7 +17,7 @@ class Application extends Controller {
   }
   
   def getInfo = Action { 
-
+      //InputStream
       val filename = "app/controllers/sorteios.txt"
       val stream = ((new FileInputStream(filename)))
 
