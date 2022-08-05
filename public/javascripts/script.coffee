@@ -54,7 +54,6 @@ checkNumbers = (ev) ->
 
   err = 0
 
-
 reset = ->
   msg = document.getElementById("msg")
   result = document.getElementById("result")
